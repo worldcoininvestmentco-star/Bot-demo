@@ -9,8 +9,7 @@ async function startBot() {
 
   const sock = makeWASocket({
     logger: P({ level: "silent" }),
-    auth: state,
-    printQRInTerminal: true
+    auth: state
   });
 
   sock.ev.on("creds.update", saveCreds);
